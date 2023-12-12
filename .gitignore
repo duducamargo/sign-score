@@ -1,0 +1,28 @@
+node_modules/
+
+#Arquivos de Configuração#
+.env
+.env.local
+.env.*.local
+
+#Arquivos de Log e Dados Temporários#
+*.log
+logs/
+tmp/
+
+#Arquivos de Build#
+build/
+dist/
+out/
+
+#Arquivos de Histórico#
+.hg/
+.svn/
+
+#Arquivos de Sessão e Cache#
+.session/
+.cache/
+
+#Arquivos de Configuração de IDE#
+.vscode/
+.idea/
