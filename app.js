@@ -6,6 +6,8 @@ app.use(
     setHeaders: (res, path) => {
       if (path.endsWith(".js")) {
         res.setHeader("Content-Type", "application/javascript");
+      } else if (path.endsWith(".css")) {
+        res.setHeader("Content-Type", "text/css");
       }
     },
   })
@@ -32,21 +34,19 @@ app.get("/aboutsign", (req, res) => {
 });
 
 app.get("/water", (req, res) => {
-  res.render("../views/signsWater.ejs");
+  res.render("../views/signEjs/signsWater.ejs");
 });
 
 app.get("/earth", (req, res) => {
-  res.render("../views/signsEarth.ejs");
+  res.render("../views/signEjs/signsEarth.ejs");
 });
 
 app.get("/fire", (req, res) => {
-  res.render("../views/signsFire.ejs");
+  res.render("../views/signEjs/signsFire.ejs");
 });
 
 app.get("/air", (req, res) => {
-  res.render("../views/signsAir.ejs");
+  res.render("../views/signEjs/signsAir.ejs");
 });
-
-app.get;
 
 app.listen(3000);
