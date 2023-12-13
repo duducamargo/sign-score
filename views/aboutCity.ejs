@@ -3,9 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="city.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script type="module" src="/scripts/index.js"></script>
+    <script type="module" src="/scripts/city.js"></script>
     <link rel="icon" type="image/x-icon" href="img/icone.png" />
     <title>sign.score</title>
   </head>
@@ -19,7 +19,7 @@
         </div>
         <nav>
           <ul>
-            <a href="#">
+            <a href="/">
               <li>home</li>
             </a>
             <a href="register">
@@ -35,37 +35,15 @@
         </nav>
       </header>
       <div id="cover">
-        <h1>results</h1>
+        <h1>City result</h1>
         <div id="resultado">
-          The result of your registration will be displayed in this field.
+          The results of your city will be displayed here
         </div>
       </div>
-      <div id="caracRes">
-        <h3>Characteristics</h3>
-        <section>
-          <ul>
-            <li>
-              <p id="caracSign">
-                The characteristics of your sign will be displayed in this
-                field.
-              </p>
-              <p>Sign Characteristics</p>
-            </li>
-            <li>
-              <p id="caracElem">
-                The characteristics of the element of your sign will be
-                displayed in this field.
-              </p>
-              <p>Element Characteristics</p>
-            </li>
-          </ul>
-        </section>
-      </div>
       <div class="citycarac">
-        <a href="aboutcity">
-          <p>Clik here to see the characteristics of your city</p>
-        </a>
+        <input type="button" id="change" value="This is not my City" />
       </div>
+      <div id="aviso"></div>
     </main>
     <footer>
       <a href="https://github.com/duducamargo" target="_blank">

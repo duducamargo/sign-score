@@ -85,7 +85,7 @@ section {
 }
 
 section h1 {
-  color: white;
+  color: #fff;
   font-weight: bold;
   font-size: 26pt;
   font-family: "League Spartan", sans-serif;
@@ -93,7 +93,7 @@ section h1 {
 }
 
 section p {
-  color: white;
+  color: #fff;
   font-weight: bold;
   font-size: 16pt;
   font-family: "League Spartan", sans-serif;

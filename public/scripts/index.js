@@ -4,6 +4,7 @@ let nome = localStorage.getItem("namevalue");
 let dia = Number(localStorage.getItem("dayvalue"));
 let mes = Number(localStorage.getItem("monthvalue"));
 let ano = Number(localStorage.getItem("yearvalue"));
+let city = localStorage.getItem("cidadevalue");
 
 console.log(nome);
 console.log(dia);
@@ -85,7 +86,7 @@ function exibirResultados() {
   console.log(caractSignos);
 
   // Atualiza o conteúdo do elemento com id "resultado" com informações sobre o usuário
-  result.innerHTML = `Your Results...<br>Name: ${nome}<br>Age: ${idade}<br>Zodiac Sign: ${signo}<br>Element: ${elemento}`;
+  result.innerHTML = `Your Results...<br>Name: ${nome}<br>City: ${city}<br>Age: ${idade}<br>Zodiac Sign: ${signo}<br>Element: ${elemento}`;
 
   caracteristicas.innerHTML = `${caractSignos}`;
 

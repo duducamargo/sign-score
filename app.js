@@ -33,6 +33,10 @@ app.get("/aboutsign", (req, res) => {
   res.render("../views/aboutSign.ejs");
 });
 
+app.get("/aboutcity", (req, res) => {
+  res.render("../views/aboutCity.ejs");
+});
+
 app.get("/water", (req, res) => {
   res.render("../views/signEjs/signsWater.ejs");
 });

@@ -5,6 +5,8 @@ botao.addEventListener("click", valoresPassados);
 function valoresPassados() {
   let name = document.getElementById("name").value;
   localStorage.setItem("namevalue", name);
+  let cidade = document.getElementById("city").value;
+  localStorage.setItem("cidadevalue", cidade);
   let day = document.getElementById("day").value;
   localStorage.setItem("dayvalue", day);
   let month = document.getElementById("month").value;
