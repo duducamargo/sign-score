@@ -108,7 +108,7 @@ nav a:active {
   margin: auto auto;
   background-color: #0e0e0e;
   border-radius: 5px;
-  padding: 20px;
+  padding: 1.4em;
   font-size: 16pt;
 }
 
@@ -142,25 +142,60 @@ nav a:active {
   box-sizing: border-box;
 }
 
+.buttons {
+  margin: 40px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+  height: 80px;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
 #change {
+  width: 45%;
   font-family: "Bebas Neue", sans-serif;
   font-size: 16pt;
-  display: block;
   margin: auto auto;
   margin-top: 5px;
-  padding: 10px;
-  border: none;
+  padding: 15px 20px;
+  border: #fff solid 1px;
+  border-radius: 3px;
   background-color: #0e0e0e;
   color: white;
   cursor: pointer;
 }
 
 #change:hover {
-  color: #4b0084; /* Cor desejada para o hover */
+  color: #4b0084;
 }
 
 #change:active {
-  color: #36005f; /* Cor desejada para o estado ativo */
+  color: #36005f;
+}
+
+#previous {
+  width: 45%;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 16pt;
+  margin: auto auto;
+  margin-top: 5px;
+  padding: 15px 20px;
+  border: none;
+  border: #fff solid 1px;
+  border-radius: 3px;
+  background-color: #0e0e0e;
+  color: white;
+  cursor: pointer;
+}
+
+#previous:hover {
+  color: #4b0084;
+}
+
+#previous:active {
+  color: #36005f;
 }
 
 #aviso {

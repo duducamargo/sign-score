@@ -25,6 +25,10 @@ app.get("/register", (req, res) => {
   res.render("../views/cadastro.ejs");
 });
 
+app.get("/historic", (req, res) => {
+  res.render("../views/historic.ejs");
+});
+
 app.get("/aboutus", (req, res) => {
   res.render("../views/about.ejs");
 });

@@ -12,7 +12,7 @@ console.log(mes);
 console.log(ano);
 
 // Define um objeto chamado "limitesDosSignos" com os períodos dos signos do zodíaco
-const limitesDosSignos = {
+export const limitesDosSignos = {
   Aquarius: { inicio: { mes: 1, dia: 21 }, fim: { mes: 2, dia: 19 } },
   Pisces: { inicio: { mes: 2, dia: 20 }, fim: { mes: 3, dia: 20 } },
   Aries: { inicio: { mes: 3, dia: 21 }, fim: { mes: 4, dia: 19 } },
@@ -29,7 +29,7 @@ const limitesDosSignos = {
 };
 
 // Função para determinar o signo com base no mês e dia de nascimento
-function descSigno(mes, dia) {
+export function descSigno(mes, dia) {
   for (const signo in limitesDosSignos) {
     const limites = limitesDosSignos[signo];
     const inicio = limites.inicio;
@@ -48,7 +48,7 @@ function descSigno(mes, dia) {
   }
 }
 
-function descElemento(signo) {
+export function descElemento(signo) {
   if (signo == "Aries" || signo == "Leo" || signo == "Sagittarius") {
     return "Fire";
   } else if (signo == "Cancer" || signo == "Scorpio" || signo == "Pisces") {
@@ -60,12 +60,11 @@ function descElemento(signo) {
   }
 }
 
-function calcIdade(ano, mes, dia) {
-  const dataNascimento = new Date(ano, mes - 1, dia); // O mês é base zero, então subtraímos 1
+export function calcIdade(ano, mes, dia) {
+  const dataNascimento = new Date(Number(ano), Number(mes) - 1, Number(dia));
   const dataAtual = new Date();
-  const idade = dataAtual.getFullYear() - dataNascimento.getFullYear();
+  let idade = dataAtual.getFullYear() - dataNascimento.getFullYear();
 
-  // Verifica se o aniversário já ocorreu este ano
   if (
     dataAtual.getMonth() < dataNascimento.getMonth() ||
     (dataAtual.getMonth() === dataNascimento.getMonth() &&
@@ -77,15 +76,14 @@ function calcIdade(ano, mes, dia) {
 }
 
 function exibirResultados() {
-  let signo = descSigno(mes, dia); // Determina o signo
-  let idade = calcIdade(ano, mes, dia); // Calcula a idade
+  let signo = descSigno(mes, dia);
+  let idade = calcIdade(ano, mes, dia);
   let elemento = descElemento(signo);
   let caractSignos = caractSign(signo);
   let caractElementos = caractElem(elemento);
 
   console.log(caractSignos);
 
-  // Atualiza o conteúdo do elemento com id "resultado" com informações sobre o usuário
   result.innerHTML = `Your Results...<br>Name: ${nome}<br>City: ${city}<br>Age: ${idade}<br>Zodiac Sign: ${signo}<br>Element: ${elemento}`;
 
   caracteristicas.innerHTML = `${caractSignos}`;

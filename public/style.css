@@ -112,6 +112,28 @@ nav a:active {
   font-size: 16pt;
 }
 
+#cover a {
+  position: absolute;
+  right: 0;
+  margin: 2em 4em;
+  font-size: 12pt;
+  font-weight: bold;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid #0e0e0e;
+  border-radius: 3px;
+  padding: 1em;
+  background-color: #0e0e0e;
+}
+
+#cover a:hover {
+  color: #4b0084;
+}
+
+#cover a:active {
+  color: #36005f;
+}
+
 #caracRes {
   width: 100%;
   height: 500px;

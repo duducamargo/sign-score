@@ -36,7 +36,7 @@
         <section>
             <div class="container">
                 <h1>Create Account</h1>
-                <form action="/">
+                <form action="/" id="form-api">
                     <div class="names">
                         <div class="name"> 
                             <label for="name">Name: </label>
@@ -74,6 +74,24 @@
     </footer>
 
     <script type="module" src="/scripts/cadastro.js"></script>
+    <script>
+        const formEl = document.getElementById("form-api")
+
+        formEl.addEventListener("submit", evento => {
+            // evento.preventDefault();
+
+            const formData = new FormData(formEl);
+            const data = Object.fromEntries(formData);
+
+            fetch("http://localhost:5000/results", {
+                method: "POST",
+                headers: {
+                    "Content-Type" : "application/json"
+                },
+                body: JSON.stringify(data)
+            }).then(res => res.json()).then(data => console.log(data)).catch(err => console.log(err))
+        })
+    </script>
 
 </body>
 

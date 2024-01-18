@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="city.css" />
+    <link rel="stylesheet" href="loader.css" />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script type="module" src="/scripts/city.js"></script>
     <link rel="icon" type="image/x-icon" href="img/icone.png" />
@@ -37,11 +38,12 @@
       <div id="cover">
         <h1>City result</h1>
         <div id="resultado">
-          The results of your city will be displayed here
+          <div id="loader" class="loader"></div>
         </div>
       </div>
-      <div class="citycarac">
-        <input type="button" id="change" value="This is not my City" />
+      <div class="buttons">
+        <input type="button" id="previous" value="Previous" />
+        <input type="button" id="change" value="Next" />
       </div>
       <div id="aviso"></div>
     </main>
