@@ -21,4 +21,4 @@ This repository contains a simple astrology website where users can discover the
 1. **Clone the repository**:
 
    ```bash
-   git clone https://github.com/duducamargo/astrology-website.git
+   git clone https://github.com/duducamargo/sign-score.git
